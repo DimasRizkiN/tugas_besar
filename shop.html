@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Ecommerce Website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>+5794875031</span>
+
+            <span>Cianjur</span>
+          </div>
+
+          <p class="header__alert-news">
+            Super Value Deals - Save more with coupons
+          </p>
+
+          <a href="login-register.html" class="header__top-action">
+            Log In / Sign Up
+          </a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link active-link">Shop</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input 
+              type="text" 
+              placeholder="Search for items..."
+              class="form__input"
+              />
+
+              <button class="search__btn">
+                <img src="assets/img/search.png" alt="" />
+              </button>
+          </div>
+        </div>
+
+        <div class="header__user-action">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="Wishlist" />
+            <span class="count" id="wishlist-count">0</span>
+          </a>
+        
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="Cart" />
+            <span class="count" id="cart-count">0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li><span class="breadcrumb__link">Shop</span></li>
+        </ul>
+      </section>
+
+      <!--=============== PRODUCTS ===============-->
+      <section class="products section--lg container">
+        <p class="total__products">We found <span>19</span> items for you!</p>
+      
+        <div class="products__container grid">
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="#" class="product__images">
+                <img src="assets/img/product-1-1.jpg" alt="" class="product__img default">
+                <img src="assets/img/product-1-2.jpg" alt="" class="product__img hover">
+              </a>
+      
+              <!-- ACTION BUTTONS (wishlist, compare, view) -->
+              <div class="product__actions">
+                <!-- Quick View -->
+                <a href="details.html"
+                    class="action__btn"
+                    aria-label="Quick View"
+                    data-title="Men's Hawaiin Shirt"
+                    data-brand="adidas"
+                    data-price="98.32"
+                    data-old-price="245.80"
+                    data-discount="60"
+                    data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                    data-image="assets/img/product-1-1.jpg"
+                    data-image2="assets/img/product-1-2.jpg">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <!-- Wishlist -->
+                <a href="#" 
+                   class="action__btn add-to-wishlist" 
+                   aria-label="Add to Wishlist" 
+                   data-id="1" 
+                   data-title="Men's Hawaiin Shirt" 
+                   data-price="$98.32" 
+                   data-img="assets/img/product-1-1.jpg">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+      
+                <!-- Compare -->
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+      
+              <div class="product__badge light-pink">60%</div>
+            </div>
+      
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Men's Hawaiin Shirt</h3>
+              </a>
+      
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+      
+              <div class="product__price flex">
+                <span class="new__price">$98.32</span>
+                <span class="old__price">$245.80</span>
+              </div>
+      
+              <a href="cart.html" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="#" class="product__images">
+                <img src="assets/img/product-2-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-2-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="details.html"
+                    class="action__btn"
+                    aria-label="Quick View"
+                    data-title="Ganz Clothing"
+                    data-brand="adidas"
+                    data-price="160.0"
+                    data-old-price="200.0"
+                    data-discount="20"
+                    data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                    data-image="assets/img/product-2-1.jpg"
+                    data-image2="assets/img/product-2-2.jpg">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" 
+                   class="action__btn add-to-wishlist" 
+                   aria-label="Add to Wishlist" 
+                   data-id="2" 
+                   data-title="Ganz Clothing" 
+                   data-price="$160.0" 
+                   data-img="assets/img/product-2-1.jpg">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-green">20%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Ganz Clothing</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$160.0</span>
+                <span class="old__price">$200.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="#" class="product__images">
+                <img src="assets/img/product-3-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-3-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="details.html"
+                    class="action__btn"
+                    aria-label="Quick View"
+                    data-title="Driving Loafers"
+                    data-brand="adidas"
+                    data-price="109.0"
+                    data-old-price="218.0"
+                    data-discount="50"
+                    data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                    data-image="assets/img/product-3-1.jpg"
+                    data-image2="assets/img/product-3-2.jpg">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" 
+                   class="action__btn add-to-wishlist" 
+                   aria-label="Add to Wishlist" 
+                   data-id="3" 
+                   data-title="Driving Loafers" 
+                   data-price="$109.0" 
+                   data-img="assets/img/product-3-1.jpg">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-orange">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Shoes</span>
+              <a href="details.html">
+                <h3 class="product__title">Driving Loafers</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$109.0</span>
+                <span class="old__price">$218.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-4-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-4-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="details.html"
+                    class="action__btn"
+                    aria-label="Quick View"
+                    data-title="Flower Embroidery"
+                    data-brand="adidas"
+                    data-price="126.0"
+                    data-old-price="140.0"
+                    data-discount="10"
+                    data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                    data-image="assets/img/product-4-1.jpg"
+                    data-image2="assets/img/product-4-2.jpg">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" 
+                   class="action__btn add-to-wishlist" 
+                   aria-label="Add to Wishlist" 
+                   data-id="4" 
+                   data-title="Flower Embroidery" 
+                   data-price="$126.0" 
+                   data-img="assets/img/product-4-1.jpg">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-blue">10%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Trousers</span>
+              <a href="details.html">
+                <h3 class="product__title">Flower Embroidery</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$126.0</span>
+                <span class="old__price">$140.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-5-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-5-1.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="details.html"
+                    class="action__btn"
+                    aria-label="Quick View"
+                    data-title="Floral Print Beanie Hat"
+                    data-brand="adidas"
+                    data-price="44.0"
+                    data-old-price="110.0"
+                    data-discount="10"
+                    data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                    data-image="assets/img/product-5-1.jpg">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" 
+                   class="action__btn add-to-wishlist" 
+                   aria-label="Add to Wishlist" 
+                   data-id="5" 
+                   data-title="Floral Print Beanie Hat" 
+                   data-price="$44.0" 
+                   data-img="assets/img/product-5-1.jpg">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">60%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Hat</span>
+              <a href="details.html">
+                <h3 class="product__title">Floral Print Beanie Hat</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$44.0</span>
+                <span class="old__price">$110.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-6-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-6-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="details.html"
+                    class="action__btn"
+                    aria-label="Quick View"
+                    data-title="Shiv Enterprise Men"
+                    data-brand="adidas"
+                    data-price="54.0"
+                    data-old-price="135.0"
+                    data-discount="60"
+                    data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                    data-image="assets/img/product-6-1.jpg">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" 
+                   class="action__btn add-to-wishlist" 
+                   aria-label="Add to Wishlist" 
+                   data-id="6" 
+                   data-title="Shiv Enterprise Men" 
+                   data-price="$54.0" 
+                   data-img="assets/img/product-6-1.jpg">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">60%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Shiv Enterprise Men</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$54.0</span>
+                <span class="old__price">$135.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-7-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-7-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="details.html"
+                class="action__btn"
+                aria-label="Quick View"
+                data-title="Shiv Enterprise Men"
+                data-brand="adidas"
+                data-price="99.20"
+                data-old-price="124.0"
+                data-discount="20"
+                data-description="Kemeja cardigan adalah perpaduan antara dua jenis pakaian: kemeja dan cardigan..."
+                data-image="assets/img/product-7-1.jpg">
+              <i class="fi fi-rs-eye"></i>
+            </a>
+
+            <a href="#" 
+               class="action__btn add-to-wishlist" 
+               aria-label="Add to Wishlist" 
+               data-id="6" 
+               data-title="Shiv Enterprise Men" 
+               data-price="$54.0" 
+               data-img="assets/img/product-7-1.jpg">
+              <i class="fi fi-rs-heart"></i>
+            </a>
+
+            <a href="#" class="action__btn" onclick="handleCompareClick('product-1')" aria-label="Compare">
+              <i class="fi fi-rs-shuffle"></i> Compare
+          </a>
+          
+              </div>
+
+              <div class="product__badge light-green">20%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Shirt Maille Chaude</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$99.20</span>
+                <span class="old__price">$124.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-8-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-8-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-green">20%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">ANG Mens Patchwork</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$108.0</span>
+                <span class="old__price">$135.0</span>
+              </div>
+
+              <a 
+                href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Add to Cart"
+                data-id="8"
+                data-title="Driving Loafers"
+                data-price="108.0"
+                data-img="assets/img/product-8-1.jpg">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-9-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-9-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">60%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Shirt PulFrint</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$78.0</span>
+                <span class="old__price">$195.0</span>
+              </div>
+
+              <a 
+                href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Add to Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-10-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-10-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-orange">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Sandals</span>
+              <a href="details.html">
+                <h3 class="product__title">Summer Women Wedges</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$57.50</span>
+                <span class="old__price">$115.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-11-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-11-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">60%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Trousers</span>
+              <a href="details.html">
+                <h3 class="product__title">Vintage Printed Pant's</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$68.0</span>
+                <span class="old__price">$170.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-12-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-12-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-green">20%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Embroidered sequins</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$176.0</span>
+                <span class="old__price">$220.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/product-13-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/product-13-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-blue">10%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Bag</span>
+              <a href="details.html">
+                <h3 class="product__title">Coach Lonnie Bagautte</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$144.0</span>
+                <span class="old__price">$160.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/showcase-img-1.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/showcase-img-1.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Bag</span>
+              <a href="details.html">
+                <h3 class="product__title">Emory Rubyna</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$140.0</span>
+                <span class="old__price">$280.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/showcase-img-2.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/showcase-img-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">pillow case</span>
+              <a href="details.html">
+                <h3 class="product__title">floral pillow case</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$45.0</span>
+                <span class="old__price">$90.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/showcase-img-3.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/showcase-img-3.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Bag</span>
+              <a href="details.html">
+                <h3 class="product__title">Chain Sling Bag</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$122.50</span>
+                <span class="old__price">$245.0</span>
+              </div>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/showcase-img-5.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/showcase-img-5.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Vintage Floral Shirt</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$134.0</span>
+                <span class="old__price">$268.0</span>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/showcase-img-6.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/showcase-img-6.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Stripe Circle T-Shirt</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$106.50</span>
+                <span class="old__price">$213.0</span>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/category-8.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/category-8.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-pink">50%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Hat</span>
+              <a href="details.html">
+                <h3 class="product__title">Bucket Hat Nwirdatun</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$49.50</span>
+                <span class="old__price">$99.0</span>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          </div>
+
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img src="assets/img/category-2.jpg" alt="" 
+                class="product__img default">
+
+                <img src="assets/img/category-2.jpg" alt=""
+                class="product__img hover">
+              </a>
+
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quizk View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+
+              <div class="product__badge light-green">20%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Bag</span>
+              <a href="details.html">
+                <h3 class="product__title">Hand Bag Flower</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">$63.20</span>
+                <span class="old__price">$79.0</span>
+
+              <a href="#" class="action__btn cart__btn" aria-label="Add to Cart">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img 
+              src="assets/img/icon-email.svg" 
+              alt="" 
+              class="newsletter__icon">
+              Sign up to Newsletter
+          </h3>
+
+          <p class="newsletter__description">...and receive $25 coupon for first shooping
+          </p>
+
+          <from class="newsletter__form">
+            <input type="text" 
+            placeholder="Enter your email" 
+            class="newsletter__input">
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </from>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logo.svg" alt="" class="footer__logo-img">
+          </a>
+
+          <h4 class="footer__subtitle">Contant</h4>
+
+          <p class="footer__description">
+            <span>Address:</span> Jln.Sabandar Kp.Waas Kec.Karangtengah Kab.Cianjur
+          </p>
+
+          <p class="footer__description">
+            <span>Phone:</span> 0857-9487-5031
+          </p>
+
+          <p class="footer__description">
+            <span>Hourse:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+
+
+            <div class="footer__social-links flex">
+              <a href="https://www.facebook.com/opik.370040">
+                <img src="assets/img/icon-facebook.svg" alt=""
+                class="footer__social-icon">
+              </a>
+
+                <a href="https://x.com/0p1k_?t=FLQQ1cIlOSVomgC7At51gw&s=09">
+                  <img src="assets/img/icon-twitter.svg" alt=""
+                  class="footer__social-icon">
+                </a>
+
+                <a href="https://www.instagram.com/rizkyy.dimas/">
+                  <img src="assets/img/icon-instagram.svg" alt=""
+                  class="footer__social-icon">
+                </a>
+
+                <a href="">
+                  <img src="assets/img/icon-pinterest.svg" alt=""
+                  class="footer__social-icon">
+                </a>
+
+                <a href="https://youtube.com/@asalshootstudio?si=RvHdSwOf8HsfO81B">
+                  <img src="assets/img/icon-youtube.svg" alt=""
+                  class="footer__social-icon">
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+
+          <ul class="footer__links">
+            <li><a href="" class="footer__link">About Us</a></li>
+            <li><a href="" class="footer__link">Delivery Information</a></li>
+            <li><a href="" class="footer__link">Privaci Police</a></li>
+            <li><a href="" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="" class="footer__link">Contant Us</a></li>
+            <li><a href="" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+
+          <ul class="footer__links">
+            <li><a href="" class="footer__link">Sign In</a></li>
+            <li><a href="" class="footer__link">View Cart</a></li>
+            <li><a href="" class="footer__link">My Wishlist</a></li>
+            <li><a href="" class="footer__link">Track My Order</a></li>
+            <li><a href="" class="footer__link">Help</a></li>
+            <li><a href="" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+
+          <img src="assets/img/payment-method.png" 
+          alt="" 
+          class="payment__img">
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2025 Evara. All rights reserved</p>
+        <span class="designer">Designed by Hadi Abdurosyid</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    
+  </body>
+</html>
