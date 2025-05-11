@@ -181,6 +181,102 @@ table {
   resize: none;
 }
 
+/*=============== About Us ===============*/
+#about {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+#about h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--first-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#about h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#about p:first-of-type {
+  text-indent: 40px;
+}
+
+
+/* Layout 2 kolom */
+#about .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Kolom gambar */
+#about .col-md-6:first-child {
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding: 10px;
+}
+
+/* Kolom teks */
+#about .col-md-6:last-child {
+  flex: 0 0 70%;
+  max-width: 70%;
+  padding: 10px;
+}
+
+/* Gambar kecil dan rapi */
+#about .card {
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+#about .card img {
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+/* Paragraf */
+#about p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  #about .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #about .col-md-6:last-child {
+    text-align: justify;
+  }
+
+  #about h1 {
+    font-size: 28px;
+  }
+
+  #about p {
+    font-size: 15px;
+  }
+}
+
+
+
 /*=============== HEADER & NAV ===============*/
 
 .header__top {
@@ -1613,6 +1709,47 @@ table {
   padding: 2rem;
   border-radius: 0.5rem;
 }
+
+.form__input-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 40%;                /* Tempatkan ikon di tengah vertikal */
+  right: 15px;             /* Jarak dari sisi kanan input */
+  transform: translateY(-50%); /* Sesuaikan agar benar-benar di tengah */
+  cursor: pointer;        /* Tunjukkan bahwa ikon bisa diklik */
+  font-size: 1.2rem;       /* Ukuran ikon */
+  color: #888;             /* Warna ikon (default abu-abu) */
+}
+
+.form__inputt {
+  width: 100%;
+  padding: 12px 40px 12px 12px;  /* Menambah padding di kanan untuk memberi ruang ikon */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.password-toggle.fa-eye-slash {
+  color: #f44336;   /* Warna merah untuk ikon mata yang dicoret */
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+}
+
 
 /*=============== ACCOUNTS ===============*/
 .accounts__container {

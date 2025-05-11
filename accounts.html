@@ -6,6 +6,7 @@
 
       <!--=============== FLATICON ===============-->
       <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
 
       <!--=============== SWIPER CSS ===============-->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -52,15 +53,11 @@
             </li>
 
             <li class="nav__item">
-              <a href="accounts.html" class="nav__link active-link">My Account</a>
+              <a href="compare.html" class="nav__link">Compare</a>
             </li>
 
             <li class="nav__item">
-              <a href="compare.html" class="nav__link active-link">Compare</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="login-register.html" class="nav__link action-link">Login</a>
+              <a href="aboutsus.html" class="nav__link">About Us</a>
             </li>
           </ul>
 
@@ -78,14 +75,18 @@
         </div>
 
         <div class="header__user-action">
-          <a href="wishlist.html" class="header__action-btn">
-            <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
+          <a href="accounts.html" class="header__action-btn">
+            <img src="assets/img/user (2).svg" alt="Account" />
           </a>
 
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="Wishlist" />
+            <span class="count" id="wishlist-count">0</span>
+          </a>
+        
           <a href="cart.html" class="header__action-btn">
-            <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
+            <img src="assets/img/icon-cart.svg" alt="Cart" />
+            <span class="count" id="cart-count">0</span>
           </a>
         </div>
       </nav>
@@ -126,9 +127,10 @@
               <i class="fi fi-rs-user"></i> Change Password
             </p>
 
-            <p class="account__tab">
+            <p class="account__tab logoutBtn" style="cursor: pointer;">
               <i class="fi fi-rs-exit"></i> Logout
             </p>
+            
           </div>
 
           <div class="tabs__content">
@@ -177,7 +179,7 @@
                     <td>#243</td>
                     <td>January 5, 2025</td>
                     <td>Completed</td>
-                    <td>28.00</td>
+                    <td>$28.00</td>
                     <td><a href="#" class="view__order">View</a></td>
                   </tr>
                 </table>
@@ -186,52 +188,66 @@
 
             <div class="tab__content" content id="update-profile">
               <h3 class="tab__header">Update Profile</h3>
-
+            
               <div class="tab__body">
                 <form action="" class="form grid">
-                  <input type="text" placeholder="Username" 
-                  class="form__input">
-
+                  <!-- Tampilkan Username yang bisa diedit -->
+                  <input type="text" id="username" placeholder="Username" class="form__input">
+            
                   <div class="form__btn">
-                    <button class="btn btn--md">Save</button>
+                    <button type="submit" class="btn btn--md">Save</button>
                   </div>
                 </form>
               </div>
             </div>
+            
 
             <div class="tab__content" content id="address">
               <h3 class="tab__header">Shipping Address</h3>
-
+            
               <div class="tab__body">
-                <address class="address">
-                  3522 Intersate <br> 75 business spur, <br> sault ste. marie, <br> mi 987546
-                </address>
-                <p class="city">Cianjur</p>
-                <a href="" class="edit">Edit</a>
+                <!-- Mode Tampilan -->
+                <div class="address-display">
+                  <address class="address">3522 Intersate <br> 75 business spur, <br> sault ste. marie, <br> mi 987546</address>
+                  <p class="city">Cianjur</p>
+                </div>
+            
+                <!-- Mode Edit (sembunyi dulu) -->
+                <form class="address-edit" style="display: none;">
+                  <textarea class="form__input" id="edit-address" rows="4"></textarea>
+                  <input type="text" class="form__input" id="edit-city" placeholder="City">
+                  <button class="btn btn--md save-address" type="submit">Save</button>
+                </form>
+            
+                <a href="#" class="edit">Edit</a>
               </div>
             </div>
+            
 
             <div class="tab__content" content id="change-password">
               <h3 class="tab__header">Change Password</h3>
 
               <div class="tab__body">
-                <form action="" class="form grid">
-                  <input type="password" 
-                    placeholder="Current Password" 
-                    class="form__input">
-
-                    <input type="password" 
-                    placeholder="New Password" 
-                    class="form__input">
-
-                    <input type="password" 
-                    placeholder="Confirm Password" 
-                    class="form__input">
-
-                  <div class="form__btn">
-                    <button class="btn btn--md">Save</button>
+                <form action="" class="form grid" id="change-password-form">
+                  <div class="password-wrapper">
+                    <input type="password" placeholder="Current Password" class="form__input" id="current-password">
+                    <i class="fa fa-eye password-toggle" data-target="current-password"></i>
                   </div>
-                </form>
+                
+                  <div class="password-wrapper">
+                    <input type="password" placeholder="New Password" class="form__input" id="new-password">
+                    <i class="fa fa-eye password-toggle" data-target="new-password"></i>
+                  </div>
+                
+                  <div class="password-wrapper">
+                    <input type="password" placeholder="Confirm Password" class="form__input" id="confirm-password">
+                    <i class="fa fa-eye password-toggle" data-target="confirm-password"></i>
+                  </div>
+                
+                  <div class="form__btn">
+                    <button class="btn btn--md" type="submit">Save</button>
+                  </div>
+                </form>   
               </div>
             </div>
           </div>

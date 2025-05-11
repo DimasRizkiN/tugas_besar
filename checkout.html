@@ -18,70 +18,80 @@
   <body>
     <!--=============== HEADER ===============-->
     <header class="header">
-      <div class="header__top">
-        <div class="header__container container">
-          <div class="header__contact">
-            <span>+5794875031</span>
-
-            <span>Cianjur</span>
-          </div>
-
-          <p class="header__alert-news">
-            Super Value Deals - Save more with coupons
-          </p>
-
-          <a href="login-register.html" class="header__top-action">
-            Log In / Sign Up
-          </a>
-        </div>
-      </div>
-
-      <nav class="nav container">
-        <a href="index.html" class="nav__logo">
-          <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
-        </a>
-
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="index.html" class="nav__link">Home</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="shop.html" class="nav__link">Shop</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="compare.html" class="nav__link">Compare</a>
-            </li>
-          </ul>
-
-          <div class="header__search">
-            <input 
-              type="text" 
-              placeholder="Search for items..."
-              class="form__input"
-              />
-
-              <button class="search__btn">
-                <img src="assets/img/search.png" alt="" />
-              </button>
+      <header class="header">
+        <div class="header__top">
+          <div class="header__container container">
+            <div class="header__contact">
+              <span>+5794875031</span>
+  
+              <span>Cianjur</span>
+            </div>
+  
+            <p class="header__alert-news">
+              Super Value Deals - Save more with coupons
+            </p>
+  
+            <a href="login-register.html" class="header__top-action">
+              Log In / Sign Up
+            </a>
           </div>
         </div>
-
-        <div class="header__user-action">
-          <a href="wishlist.html" class="header__action-btn">
-            <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
+  
+        <nav class="nav container">
+          <a href="index.html" class="nav__logo">
+            <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
           </a>
-
-          <a href="cart.html" class="header__action-btn">
-            <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
-          </a>
-        </div>
-      </nav>
-    </header>
+  
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">Home</a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="shop.html" class="nav__link">Shop</a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="compare.html" class="nav__link">Compare</a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="aboutsus.html" class="nav__link">About Us</a>
+              </li>
+            </ul>
+  
+            <div class="header__search">
+              <input 
+                type="text" 
+                placeholder="Search for items..."
+                class="form__input"
+                />
+  
+                <button class="search__btn">
+                  <img src="assets/img/search.png" alt="" />
+                </button>
+            </div>
+          </div>
+  
+          <div class="header__user-action">
+            <a href="accounts.html" class="header__action-btn">
+              <img src="assets/img/user (2).svg" alt="Account" />
+            </a>
+  
+            <a href="wishlist.html" class="header__action-btn">
+              <img src="assets/img/icon-heart.svg" alt="Wishlist" />
+              <span class="count" id="wishlist-count">0</span>
+            </a>
+          
+            <a href="cart.html" class="header__action-btn">
+              <img src="assets/img/icon-cart.svg" alt="Cart" />
+              <span class="count" id="cart-count">0</span>
+            </a>
+          </div>
+        </nav>
+      </header>
+  
 
     <!--=============== MAIN ===============-->
     <main class="main">
@@ -90,7 +100,7 @@
         <ul class="breadcrumb__list flex container">
           <li><a href="index.html" class="breadcrumb__link">Home</a></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><a href="shop.html" class="breadcrumb__link">Shop</a></li>
           <li><span class="breadcrumb__link">></span></li>
           <li><span class="breadcrumb__link">Checkout</span></li>
         </ul>
@@ -99,125 +109,75 @@
       <!--=============== CHECKOUT ===============-->
       <section class="checkout section--lg">
         <div class="checkout__container container grid">
+          <!-- Billing Details -->
           <div class="checkout__group">
             <h3 class="section__title">Billing Details</h3>
-
             <form action="" class="form grid">
               <input type="text" placeholder="Name" class="form__input">
-
               <input type="text" placeholder="Address" class="form__input">
-
               <input type="text" placeholder="City" class="form__input">
-
-              <input type="text" placeholder="Country" class="form__input">
-
-              <input type="text" placeholder="Postcode" class="form__input">
-
+              <input type="text" placeholder="Country" class="form__input" id="checkout-country">
+              <input type="text" placeholder="Postcode" class="form__input" id="checkout-postcode">
               <input type="text" placeholder="Phone" class="form__input">
-
               <input type="email" placeholder="Email" class="form__input">
-
+              
               <h3 class="checkout__title">Additional Information</h3>
-
-              <textarea name="" placeholder="Order Note" id="" cols="30"
-              rows="10" class="form__input textarea"></textarea>
+              <textarea name="" placeholder="Order Note" id="" cols="30" rows="10" class="form__input textarea"></textarea>
             </form>
           </div>
-
+          
+      
+          <!-- Cart Totals -->
           <div class="checkout__group">
             <h3 class="section__title">Cart Totals</h3>
-
             <table class="order__table">
-              <tr>
-                <th colspan="2">Products</th>
-                <th>Total</th>
-              </tr>
-
-              <tr>
-                <td>
-                  <img 
-                    src="assets/img/product-1-2.jpg" 
-                    alt="" 
-                    class="order__img">
-                </td>
-
-                <td>
-                  <h3 class="table__title">Yidarton Women Summer Blue</h3>
-                  <p class="table__quantity">x 2</p>
-                </td>
-
-                <td><span class="table__price">$180.00</span></td>
-              </tr>
-
-              <tr>
-                <td>
-                  <img 
-                    src="assets/img/product-2-1.jpg" 
-                    alt="" 
-                    class="order__img">
-                </td>
-
-                <td>
-                  <h3 class="table__title">LDB MOON Women Summe</h3>
-                  <p class="table__quantity">x 1</p>
-                </td>
-
-                <td><span class="table__price">$65.00</span></td>
-              </tr>
-
-              <tr>
-                <td>
-                  <img 
-                    src="assets/img/product-7-1.jpg" 
-                    alt="" 
-                    class="order__img">
-                </td>
-
-                <td>
-                  <h3 class="table__title">Women's Short Sleeve Loose</h3>
-                  <p class="table__quantity">x 2</p>
-                </td>
-
-                <td><span class="table__price">$35.00</span></td>
-              </tr>
-
-              <tr>
-                <td><span class="order__subtitle">SubTotal</span></td>
-                <td colspan="2"><span class="table__price">$280.00</span></td>
-              </tr>
-
-              <tr>
-                <td><span class="order__subtitle">Shipping</span></td>
-                <td colspan="2"><span class="table__price">Free Shipping</span></td>
-              </tr>
-
-              <tr>
-                <td><span class="order__subtitle">Total</span></td>
-                <td colspan="2"><span class="order__grand-total">$280.00</span></td>
-              </tr>
+              <thead>
+                <tr>
+                  <th colspan="2">Products</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Produk akan ditambahkan secara dinamis di sini -->
+              </tbody>
+              <tfoot>
+                <!-- Subtotal Row -->
+                <tr>
+                  <td><span class="order__subtitle">SubTotal</span></td>
+                  <td colspan="2"><span class="table__price" id="subtotal-amount">$0.00</span></td>
+                </tr>
+                <tr>
+                  <td><span class="order__subtitle">Shipping</span></td>
+                  <td colspan="2"><span class="table__price">$10.00</span></td>
+                </tr>
+                <tr>
+                  <td><span class="order__subtitle">Total</span></td>
+                  <td colspan="2"><span class="order__grand-total">0</span></td>
+                </tr>
+              </tfoot>
             </table>
-
+      
+            <!-- Payment Methods -->
             <div class="payment__methods">
               <h3 class="checkout__title payment__title">Payment</h3>
-
               <div class="payment__option flex">
                 <input type="radio" name="radio" class="payment__input">
                 <label for="" class="payment__label">Direct Bank Transfer</label>
               </div>
-
               <div class="payment__option flex">
                 <input type="radio" name="radio" class="payment__input">
                 <label for="" class="payment__label">Check Payment</label>
               </div>
             </div>
-
+      
+            <!-- Place Order Button -->
             <button class="btn btn--md">Place Order</button>
           </div>
         </div>
       </section>
-
+      
       <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter section home__newsletter">
+      <section class="newsletter section">
         <div class="newsletter__container container grid">
           <h3 class="newsletter__title flex">
             <img 
@@ -227,8 +187,7 @@
               Sign up to Newsletter
           </h3>
 
-          <p class="newsletter__description">...and receive $25 coupon for first shooping
-          </p>
+          <p class="newsletter__description">Subscribe to get the latest product info from us</p>
 
           <from class="newsletter__form">
             <input type="text" 

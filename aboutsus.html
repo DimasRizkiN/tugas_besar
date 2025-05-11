@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!--=============== FLATICON ===============-->
-     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
 
-     <!--=============== SWIPER CSS ===============-->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  
-     <!--=============== CSS ===============-->
-     <link rel="stylesheet" href="assets/css/styles.css" />
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Ecommerce Website</title>
   </head>
@@ -52,25 +53,13 @@
             </li>
 
             <li class="nav__item">
-              <a href="compare.html" class="nav__link active-link">Compare</a>
+              <a href="compare.html" class="nav__link">Compare</a>
             </li>
 
             <li class="nav__item">
-              <a href="aboutsus.html" class="nav__link">About Us</a>
-            </li>
+                <a href="aboutsus.html" class="nav__link active-link">About Us</a>
+              </li>
           </ul>
-
-          <div class="header__search">
-            <input 
-              type="text" 
-              placeholder="Search for items..."
-              class="form__input"
-              />
-
-              <button class="search__btn">
-                <img src="assets/img/search.png" alt="" />
-              </button>
-          </div>
         </div>
 
         <div class="header__user-action">
@@ -91,30 +80,49 @@
       </nav>
     </header>
 
-
     <!--=============== MAIN ===============-->
     <main class="main">
-      <!--=============== BREADCRUMB ===============-->
+
+    <!--=============== BREADCRUMB ===============-->
       <section class="breadcrumb">
         <ul class="breadcrumb__list flex container">
           <li><a href="index.html" class="breadcrumb__link">Home</a></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><a href="shop.html" class="breadcrumb__link">Shop</a></li>
-          <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Compare</span></li>
+          <li><span class="breadcrumb__link">About Us</span></li>
         </ul>
       </section>
+    <!--=============== About Us ===============-->
+    <div class="container" id="about">
+        <h1>ABOUT US</h1>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-6 py-3 py-md-0">
+                <div class="card">
+                    <img src="./assets/img/logo.svg" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 py-3 py-md-0">
+                <p>     Evara is an online store that offers a wide range of authentic, high-quality products designed to complement a 
+                    relaxed and modern lifestyle, especially one centered around beach environments. With a fresh concept and tropical-inspired 
+                    aesthetic, Evara features a diverse selection of items such as casual clothing, summer accessories, beach essentials, 
+                    and skincare products tailored for hot and humid climates. Each product is carefully curated to match the preferences 
+                    of customers who seek stylish yet comfortable attire and goods suitable for vacations or laid-back outdoor activities by the sea.
+                    In addition to embracing a beach-focused theme, Evara is well known for its abundance of attractive deals and exclusive 
+                    promotions offered regularly to its customers. Seasonal discounts, product bundles, and special offers for loyal buyers are 
+                    some of the key reasons why the store has gained popularity. Evara goes beyond simply selling products—it provides a 
+                    seamless shopping experience through a clean website design, easy navigation, and a smooth checkout process. Authenticity 
+                    is a core value of Evara, ensuring that every item matches its description and visual presentation.
+                    
+                    By promoting a lifestyle that balances beauty, comfort, and practicality, Evara becomes the ideal choice for anyone looking 
+                    to embrace a beach-inspired look while enjoying a sense of freedom and relaxation. Perfect for young adults, travelers, 
+                    or anyone who loves a tropical vibe, Evara stands not just as an online store, but as a symbol of a vibrant, authentic, 
+                    and easygoing way of life.
+                    </p>
+            </div>
+        </div>
+    </div>
 
-      <!--=============== COMPARE ===============-->
-      <section class="compare container section--lg"> 
-        <table class="compare__table">
-            <!-- Images Row -->
-        </table>
-    </section>
-    
-
-      <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter section">
+    <!--=============== NEWSLETTER ===============-->
+    <section class="newsletter section">
         <div class="newsletter__container container grid">
           <h3 class="newsletter__title flex">
             <img 
@@ -124,8 +132,7 @@
               Sign up to Newsletter
           </h3>
 
-          <p class="newsletter__description">...and receive $25 coupon for first shooping
-          </p>
+          <p class="newsletter__description">Subscribe to get the latest product info from us</p>
 
           <from class="newsletter__form">
             <input type="text" 
@@ -238,5 +245,6 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
-  </body>
+    
+</body>
 </html>

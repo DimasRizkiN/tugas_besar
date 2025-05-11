@@ -6,6 +6,7 @@
 
    <!--=============== FLATICON ===============-->
    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
 
    <!--=============== SWIPER CSS ===============-->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -54,6 +55,10 @@
             <li class="nav__item">
               <a href="compare.html" class="nav__link">Compare</a>
             </li>
+
+            <li class="nav__item">
+              <a href="aboutsus.html" class="nav__link">About Us</a>
+            </li>
           </ul>
 
           <div class="header__search">
@@ -70,18 +75,23 @@
         </div>
 
         <div class="header__user-action">
-          <a href="wishlist.html" class="header__action-btn">
-            <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
+          <a href="accounts.html" class="header__action-btn">
+            <img src="assets/img/user (2).svg" alt="Account" />
           </a>
 
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="Wishlist" />
+            <span class="count" id="wishlist-count">0</span>
+          </a>
+        
           <a href="cart.html" class="header__action-btn">
-            <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
+            <img src="assets/img/icon-cart.svg" alt="Cart" />
+            <span class="count" id="cart-count">0</span>
           </a>
         </div>
       </nav>
     </header>
+
 
     <!--=============== MAIN ===============-->
     <main class="main">
@@ -99,55 +109,71 @@
         <div class="login-register__container container grid">
           <div class="login">
             <h3 class="section__title">Login</h3>
-
+      
             <form action="" class="form grid">
               <input 
                 type="email" 
                 placeholder="Your Email" 
                 class="form__input">
-
-              <input 
-                type="password" 
-                placeholder="Your Password" 
-                class="form__input"> 
-                
-                <div class="form__btn">
-                  <button class="btn">Login</button>
-                </div>
+      
+              <div class="form__input-group">
+                <input 
+                  type="password" 
+                  placeholder="Your Password" 
+                  class="form__inputt password-input" 
+                  id="loginPassword">
+      
+                <i class="fi fi-rr-eye password-toggle" data-target="loginPassword"></i>
+              </div>
+                      
+              <div class="form__btn">
+                <button class="btn">Login</button>
+              </div>
             </form>
           </div>
-
+      
           <div class="register">
             <h3 class="section__title">Register</h3>
-
+      
             <form action="" class="form grid">
               <input 
-              type="text" 
-              placeholder="Username" 
-              class="form__input"> 
-
+                type="text" 
+                placeholder="Username" 
+                class="form__input"> 
+      
               <input 
                 type="email" 
                 placeholder="Your Email" 
                 class="form__input">
-
-              <input 
-                type="password" 
-                placeholder="Your Password" 
-                class="form__input"> 
-
-              <input 
-                type="password" 
-                placeholder="Confirm Password" 
-                class="form__input"> 
-                
-                <div class="form__btn">
-                  <button class="btn">Submit & Register</button>
-                </div>
+      
+              <div class="form__input-group">
+                <input 
+                  type="password" 
+                  placeholder="Your Password" 
+                  class="form__inputt password-input" 
+                  id="registerPassword">
+      
+                <i class="fi fi-rr-eye password-toggle" data-target="registerPassword"></i>
+              </div>
+      
+              <div class="form__input-group">
+                <input 
+                  type="password" 
+                  placeholder="Confirm Password" 
+                  class="form__inputt password-input" 
+                  id="confirmPassword">
+      
+                <i class="fi fi-rr-eye password-toggle" data-target="confirmPassword"></i>
+              </div>
+      
+              <div class="form__btn">
+                <button class="btn">Submit & Register</button>
+              </div>
             </form>
           </div>
         </div>
       </section>
+      
 
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter section home__newsletter">
