@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!isAlreadyInWishlist) {
         wishlist.push(productToAdd);
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        alert(`${productTitle} berhasil ditambahkan ke wishlist!`);
+        alert(`${productTitle} successfully added to wishlist!`);
       } else {
-        alert(`${productTitle} sudah ada di wishlist!`);
+        alert(`${productTitle} already on the wishlist!`);
       }
 
       updateWishlistCount();
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wishlistItemsContainer.innerHTML = '';
 
     if (wishlistData.length === 0) {
-      wishlistItemsContainer.innerHTML = '<tr><td colspan="4">Wishlist Anda kosong.</td></tr>';
+      wishlistItemsContainer.innerHTML = '<tr><td colspan="4">Your wishlist is empty.</td></tr>';
       return;
     }
 
@@ -235,19 +235,19 @@ document.addEventListener('DOMContentLoaded', function () {
       const quantity = document.querySelector('.quantity').value;
 
       if (!selectedSize) {
-        alert("Silakan pilih ukuran sebelum menambahkannya ke keranjang.");
+        alert("Please select the size before adding it to cart.");
         return;
       }
 
       if (quantity <= 0) {
-        alert("Harap masukkan jumlah yang valid.");
+        alert("Please enter a valid amount.");
         return;
       }
 
       const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
 
       if (!selectedProduct) {
-        alert("Data produk tidak ditemukan.");
+        alert("Product data not found.");
         return;
       }
 
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Maksimal 3 produk
       if (compareList.length >= 3) {
-        alert('Maksimal 3 produk dapat dibandingkan.');
+        alert('Maximum 3 products can be compared.');
         return;
       }
 
@@ -387,10 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ============================
-// LOAD COMPARE TABLE
-// ============================
-
+// ============================ LOAD COMPARE TABLE ============================
 function loadCompareTable() {
   const table = document.querySelector('.compare__table');
   if (!table) return; // abaikan jika bukan di compare.html
@@ -398,7 +395,7 @@ function loadCompareTable() {
   const compareList = JSON.parse(localStorage.getItem('compareList')) || [];
 
   if (compareList.length === 0) {
-    table.innerHTML = "<tr><td colspan='6'>Tidak ada produk untuk dibandingkan.</td></tr>";
+    table.innerHTML = "<tr><td colspan='6'>There are no products to compare.</td></tr>";
     return;
   }
 
@@ -536,17 +533,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const savedUser = JSON.parse(localStorage.getItem("user"));
 
       if (!savedUser) {
-        alert("Akun tidak ditemukan. Silakan register terlebih dahulu.");
+        alert("Account not found. Please register first.");
         return;
       }
 
       if (email === savedUser.email && password === savedUser.password) {
         isLoggedIn = true;
         localStorage.setItem("isLoggedIn", "true");
-        alert("Login berhasil!");
+        alert("Login successful!");
         window.location.href = "accounts.html";
       } else {
-        alert("Email atau password salah.");
+        alert("Incorrect email or password.");
       }
     });
   }
@@ -564,23 +561,23 @@ document.addEventListener("DOMContentLoaded", function () {
       const passwordRegex = /^(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
 
       if (!username || !email || !password || !confirmPassword) {
-        alert("Mohon isi semua field.");
+        alert("Please fill in all fields.");
         return;
       }
 
       if (password !== confirmPassword) {
-        alert("Password tidak cocok.");
+        alert("Passwords do not match.");
         return;
       }
 
       if (!passwordRegex.test(password)) {
-        alert("Password harus mengandung setidaknya satu huruf besar, satu karakter khusus, dan minimal 8 karakter.");
+        alert("Password must contain at least one uppercase letter, one special character, and be at least 8 characters long.");
         return;
       }
 
       const user = { username, email, password };
       localStorage.setItem("user", JSON.stringify(user));
-      alert("Registrasi berhasil. Silakan login.");
+      alert("Registration successful. Please login.");
     });
   }
 
@@ -595,7 +592,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (savedUser) {
         savedUser.username = newUsername;
         localStorage.setItem("user", JSON.stringify(savedUser));
-        alert("Profil berhasil diperbarui.");
+        alert("Profile updated successfully.");
 
         // Perbarui tampilan Hello
         const tabHeader = document.querySelector(".tab__header");
@@ -603,21 +600,27 @@ document.addEventListener("DOMContentLoaded", function () {
           tabHeader.textContent = `Hello ${newUsername}`;
         }
       } else {
-        alert("Gagal memperbarui profil.");
+        alert("Failed to update profile.");
       }
     });
   }
 
   // ================== LOGOUT ==================
   if (logoutEl) {
-    logoutEl.style.display = isLoggedIn ? "block" : "none";
-    logoutEl.addEventListener("click", function () {
-      isLoggedIn = false;
-      localStorage.removeItem("isLoggedIn");
-      alert("Kamu telah logout.");
-      window.location.href = "login-register.html";
-    });
-  }
+  logoutEl.style.display = isLoggedIn ? "block" : "none";
+
+  logoutEl.addEventListener("click", function () {
+    // Menghapus data login dan orders dari localStorage
+    isLoggedIn = false;
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("orders");
+
+    // Memberikan notifikasi kepada pengguna dan mengarahkan ke halaman login
+    alert("You have been logged out.");
+    window.location.href = "login-register.html";
+  });
+}
+
 
   // ================== ADD TO CART ==================
   if (addToCartBtn) {
@@ -625,10 +628,10 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       if (!isLoggedIn) {
-        alert("Silakan login terlebih dahulu sebelum menambahkan produk ke keranjang.");
+        alert("Please login first before adding products to cart.");
         window.location.href = "login-register.html";
       } else {
-        alert("Produk berhasil ditambahkan ke keranjang!");
+        alert("Product successfully added to cart!");
       }
     });
   }
@@ -682,7 +685,7 @@ if (addressEditForm) {
     const newCity = cityField.value.trim();
 
     if (!newAddress || !newCity) {
-      alert("Mohon lengkapi alamat dan kota.");
+      alert("Please complete the address and city.");
       return;
     }
 
@@ -701,7 +704,7 @@ if (addressEditForm) {
     addressEditForm.style.display = "none";
     addressDisplay.style.display = "block";
 
-    alert("Alamat berhasil diperbarui.");
+    alert("Address updated successfully.");
   });
   }
 
@@ -717,24 +720,24 @@ if (addressEditForm) {
       const savedUser = JSON.parse(localStorage.getItem("user"));
 
       if (!savedUser || currentPassword !== savedUser.password) {
-        alert("Password lama salah.");
+        alert("The old password is wrong.");
         return;
       }
 
       const passwordRegex = /^(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
       if (!passwordRegex.test(newPassword)) {
-        alert("Password baru harus mengandung setidaknya satu huruf besar dan satu karakter khusus, dan minimal 8 karakter.");
+        alert("The new password must contain at least one uppercase letter and one special character, and be at least 8 characters long.");
         return;
       }
 
       if (newPassword !== confirmPassword) {
-        alert("Konfirmasi password tidak cocok.");
+        alert("Password confirmation does not match.");
         return;
       }
 
       savedUser.password = newPassword;
       localStorage.setItem("user", JSON.stringify(savedUser));
-      alert("Password berhasil diubah.");
+      alert("Password changed successfully.");
       changePasswordForm.reset();
     });
   }
@@ -822,60 +825,205 @@ if (addressEditForm) {
 
       const totalAmount = document.querySelector('.order__grand-total')?.textContent || "$0.00";
 
+      // Buat order baru
       const order = {
+        id: `#${Date.now()}`, // ID unik
+        date: new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' }),
+        status: "Processing",
+        total: totalAmount,
         billingDetails,
-        cart,
-        totalAmount,
+        items: cart,
       };
 
-      localStorage.setItem("order", JSON.stringify(order));
+      // Simpan ke localStorage sebagai array orders
+      const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
+      existingOrders.push(order);
+      localStorage.setItem("orders", JSON.stringify(existingOrders));
+
+      // Bersihkan cart dan tampilkan pesan
+      localStorage.removeItem("cart");
       alert("Order placed successfully!");
+      window.location.href = "accounts.html"; // Redirect ke halaman akun atau order list
     });
   }
 });
 
+
  // ================== Timer ================== 
-function startCountdown(countdownElement, deadline) {
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const countDownDate = new Date(deadline).getTime();
-    const distance = countDownDate - now;
+document.addEventListener("DOMContentLoaded", function () {
+    const countdowns = document.querySelectorAll(".countdown");
 
-    if (distance < 0) {
-      countdownElement.querySelector('.days').textContent = '00';
-      countdownElement.querySelector('.hours').textContent = '00';
-      countdownElement.querySelector('.mins').textContent = '00';
-      countdownElement.querySelector('.secs').textContent = '00';
-      clearInterval(interval);
-      return;
-    }
+    countdowns.forEach((countdownEl) => {
+      const deadlineStr = countdownEl.getAttribute("data-deadline");
+      const deadline = new Date(deadlineStr).getTime();
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const secs = Math.floor((distance % (1000 * 60)) / 1000);
+      const daysEl = countdownEl.querySelector(".days");
+      const hoursEl = countdownEl.querySelector(".hours");
+      const minsEl = countdownEl.querySelector(".mins");
+      const secsEl = countdownEl.querySelector(".secs");
 
-    countdownElement.querySelector('.days').textContent = String(days).padStart(2, '0');
-    countdownElement.querySelector('.hours').textContent = String(hours).padStart(2, '0');
-    countdownElement.querySelector('.mins').textContent = String(mins).padStart(2, '0');
-    countdownElement.querySelector('.secs').textContent = String(secs).padStart(2, '0');
+      const dealsItem = countdownEl.closest(".deals__item");
+      const priceNew = dealsItem?.querySelector(".new__price");
+      const priceOld = dealsItem?.querySelector(".old.price");
+      const shopBtn = dealsItem?.querySelector(".deals__btn a");
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = deadline - now;
+
+        if (distance <= 0) {
+          clearInterval(interval);
+
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minsEl.textContent = "00";
+          secsEl.textContent = "00";
+
+          // Ubah tampilan harga
+          if (priceNew && priceOld) {
+            priceNew.style.display = "none";
+            priceOld.style.display = "inline";
+          }
+
+          // Tambahan: nonaktifkan tombol Shop Now (opsional)
+          if (shopBtn) {
+            shopBtn.textContent = "Offer Ended";
+            shopBtn.classList.add("disabled");
+            shopBtn.style.pointerEvents = "none";
+            shopBtn.style.opacity = "0.5";
+          }
+
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minsEl.textContent = String(mins).padStart(2, '0');
+        secsEl.textContent = String(secs).padStart(2, '0');
+      }
+
+      const interval = setInterval(updateCountdown, 1000);
+      updateCountdown(); // Jalankan pertama kali
+    });
+  });
+
+
+   // ================== Orders ================== 
+  document.addEventListener("DOMContentLoaded", function () {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const tableBody = document.getElementById("orderTableBody");
+
+  if (orders.length === 0) {
+    tableBody.innerHTML = "<tr><td colspan='5'>No orders placed yet.</td></tr>";
+  } else {
+    orders.forEach((order, index) => {
+      const row = `
+        <tr>
+          <td>${order.id}</td>
+          <td>${order.date}</td>
+          <td>${order.status}</td>
+          <td>${order.total}</td>
+          <td><a href="#" class="view__order" data-index="${index}">View</a></td>
+        </tr>
+      `;
+      tableBody.innerHTML += row;
+    });
+
+    // Event listener untuk tombol View
+    document.querySelectorAll(".view__order").forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const index = this.getAttribute("data-index");
+        showOrderDetails(orders[index]);
+      });
+    });
   }
+});
 
-  updateCountdown();
-  const interval = setInterval(updateCountdown, 1000);
+function showOrderDetails(order) {
+  const modal = document.getElementById("orderModal");
+  const content = document.getElementById("modalContent");
+
+  let itemsHtml = order.items.map(item => `
+    <div style="border-bottom:1px solid #ccc; margin-bottom:10px; padding-bottom:5px;">
+      <p><strong>${item.name}</strong></p>
+      <p>Qty: ${item.quantity}</p>
+      <p>Price: $${item.price.toFixed(2)}</p>
+      ${item.brand ? `<p>Brand: ${item.brand}</p>` : ""}
+      ${item.size ? `<p>Size: ${item.size}</p>` : ""}
+    </div>
+  `).join("");
+
+  content.innerHTML = `
+    <p><strong>Order ID:</strong> ${order.id}</p>
+    <p><strong>Date:</strong> ${order.date}</p>
+    <p><strong>Status:</strong> ${order.status}</p>
+    <p><strong>Total:</strong> ${order.total}</p>
+    <hr>
+    <h4>Items:</h4>
+    ${itemsHtml}
+  `;
+
+  modal.style.display = "block";
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.countdown').forEach(countdown => {
-    const deadline = countdown.dataset.deadline;
-    if (deadline) {
-      startCountdown(countdown, deadline);
+function closeModal() {
+  document.getElementById("orderModal").style.display = "none";
+}
+
+function showOrderDetails(order) {
+  const modal = document.getElementById("orderModal");
+  const content = document.getElementById("modalContent");
+  const backdrop = document.getElementById("modalBackdrop");
+
+  let itemsHtml = order.items.map(item => `
+    <div style="border-bottom:1px solid #ccc; margin-bottom:10px; padding-bottom:5px;">
+      <p><strong>${item.name}</strong></p>
+      <p>Qty: ${item.quantity}</p>
+      <p>Price: $${item.price.toFixed(2)}</p>
+      ${item.brand ? `<p>Brand: ${item.brand}</p>` : ""}
+      ${item.size ? `<p>Size: ${item.size}</p>` : ""}
+    </div>
+  `).join("");
+
+  content.innerHTML = `
+    <p><strong>Order ID:</strong> ${order.id}</p>
+    <p><strong>Date:</strong> ${order.date}</p>
+    <p><strong>Status:</strong> ${order.status}</p>
+    <p><strong>Total:</strong> ${order.total}</p>
+    <hr>
+    <h4>Items:</h4>
+    ${itemsHtml}
+  `;
+
+  modal.style.display = "block";
+  backdrop.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("orderModal").style.display = "none";
+  document.getElementById("modalBackdrop").style.display = "none";
+}
+
+
+document.querySelector('.newsletter__form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Hindari reload halaman
+
+    const emailInput = document.querySelector('.newsletter__input');
+    const email = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === '') {
+      alert("Please fill in your email first.");
+    } else if (!emailRegex.test(email)) {
+      alert("Invalid email format.");
+    } else {
+      alert("You have followed the info from evara");
+      emailInput.value = ''; // Kosongkan input setelah sukses
     }
   });
-});
-
-document.getElementById("shopNowBtn").addEventListener("click", function () {
-  // Lakukan sesuatu, seperti redirect atau buka produk
-  console.log("Shop Now clicked");
-});
-
